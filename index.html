@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥧 24h Pie</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>24h Pie</h1>
+        <p>Enter how you spend your day:</p>
+        
+        <div class="input-group">
+            <label for="sleeping">Sleeping:</label>
+            <input type="text" id="sleeping" value="8h" data-minutes="480">
+        </div>
+        
+        <div class="input-group">
+            <label for="working">Working:</label>
+            <input type="text" id="working" value="8h" data-minutes="480">
+        </div>
+        
+        <div class="input-group">
+            <label for="traveling">Traveling:</label>
+            <input type="text" id="traveling" value="40m" data-minutes="40">
+        </div>
+        
+        <div class="input-group">
+            <label for="fun">Having Fun:</label>
+            <input type="text" id="fun" value="2h" data-minutes="120">
+        </div>
+        
+        <div class="chart-container">
+            <canvas id="pieChart"></canvas>
+        </div>
+        
+        <div class="stats">
+            <h2>Time Stats</h2>
+            <div class="stat-item">
+                <span>Percent of day spent sleeping:</span>
+                <span id="sleep-percent" class="stat-value">33.33%</span>
+            </div>
+            <div class="stat-item">
+                <span>Percent of day spent working:</span>
+                <span id="work-percent" class="stat-value">33.33%</span>
+            </div>
+            <div class="stat-item">
+                <span>Percent of day spent traveling:</span>
+                <span id="travel-percent" class="stat-value">2.78%</span>
+            </div>
+            <div class="stat-item">
+                <span>Percent of day spent having fun:</span>
+                <span id="fun-percent" class="stat-value">8.33%</span>
+            </div>
+            <div class="stat-item">
+                <span>Percent of day spent doing other stuff:</span>
+                <span id="other-percent" class="stat-value">22.22%</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
